@@ -13,7 +13,7 @@ class Company extends Model
         return 'slug';
     }
 
-    public function job(){
+    public function jobs(){
         return $this->hasMany(Job::class);
     }
 }

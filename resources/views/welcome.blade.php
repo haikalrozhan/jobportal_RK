@@ -10,6 +10,7 @@
                         <th scope="col">Total</th>
                         <th scope="col">Companies</th>
                         <th scope="col">Jobs</th>
+
                         <th scope="col">Address</th>
                         <th scope="col">Last Update</th>
                     </tr>
@@ -22,8 +23,9 @@
                         <tr>
                             <th scope="row">{{ $i++ }}</th>
                             <td><img src="{{ asset('avatar/avatar.jpg') }}" alt="" width="80"></td>
-                            <td>Position: {{ $job->position }} &nbsp;<i class="fa-regular fa-clock"></i>&nbsp;
-                                {{ $job->type }}
+                            <td>
+                                Position: {{ $job->position }}
+                                <div class="pt-1"><i class="fa-regular fa-clock"></i>&nbsp;{{ $job->type }}</div>
                             </td>
                             <td><i class="fa-solid fa-earth-americas"></i>&nbsp; Address: {{ $job->address }}</td>
                             <td><i class="fa-regular fa-calendar-check"></i>&nbsp; Date:
