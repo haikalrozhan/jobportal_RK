@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('description');
-            $table->string('category_id');
+            $table->text('roles');
+            $table->unsignedBigInteger('category_id');
             $table->string('position');
             $table->string('address');
             $table->string('type');

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Jobcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [JobController::class, 'index']);
+Route::get('/jobs/{id}/{job}', [JobController::class, 'show'])->name('jobs.show');
 
 Auth::routes();
 

@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Job extends Model
 {
     use HasFactory;
+
+    public function getRouteKeyName(){
+        return 'slug';
+    }
+
+    public function company(){
+        return $this->belongsTo(Company::class);
+    }
 }
