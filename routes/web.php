@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\EmployerRegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,4 +29,8 @@ Route::post('/user/profile/create', [UserController::class, 'store'])->name('use
 Route::post('/user/coverletter', [UserController::class, 'coverletter'])->name('coverletter');
 Route::post('/user/resume', [UserController::class, 'resume'])->name('resume');
 Route::post('/user/avatar', [UserController::class, 'avatar'])->name('avatar');
+
+// Employer
+Route::view('employer/register', 'auth.employer-register')->name('employer.register');
+Route::post('/employer/register', [EmployerRegisterController::class, 'employerRegister'])->name('emp.register');
 
