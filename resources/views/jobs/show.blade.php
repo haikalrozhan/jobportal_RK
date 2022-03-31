@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 @if (Auth::check() && Auth::User()->user_type == 'seeker')
-                    <button class="btn btn-success w-100">Apply</button>
+                    <button class="btn btn-success w-100 mt-3">Apply</button>
                 @endif
             </div>
         </div>
